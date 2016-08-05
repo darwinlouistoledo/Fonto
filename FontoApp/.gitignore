@@ -40,6 +40,9 @@ thumbs.db
 # Gradle cache
 .gradle
 
+# Gradle files
+gradle/
+
 # Sandbox stuff
 _sandbox
 

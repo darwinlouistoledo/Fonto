@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-optimizations !code/allocation/variable
+
+-keep public class * {
+    public protected *;
+}

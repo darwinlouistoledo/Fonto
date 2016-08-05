@@ -43,3 +43,5 @@ thumbs.db
 # Sandbox stuff
 _sandbox
 
+#bintray keys
+*.asc

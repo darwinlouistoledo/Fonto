@@ -31,7 +31,7 @@ Usage
 ---------
 First, you need to add the fonts you want to add and the create. You can do it on your `Application` class. See code snippet below.
 
-```android
+```java
 @Override
 public void onCreate() {
         super.onCreate();
@@ -45,24 +45,15 @@ public void onCreate() {
 
 After creating the font, you can now use the fonts. You can use the font by its name then set the typeface of the view with `setTypeface(Typeface)` method.
 
-```android
-
-
+```java
 TextView textView = (TextView) findViewById(R.id.textView);
 textView.setTypeface(Fonto.with(this).useFont(FontNames.FONT_LATO));
-
-
-
 ```
 You can also apply the font to the `View` or `ViewGroup`. If you're applying to a `ViewGroup`, it will look all the views that has the instance of `TextView` and `Button` inside that `ViewGroup` to set the typeface.
 
-```android
-
-
+```java
 LinearLayout linearLayout = (LinearLayout)findViewById(R.id.layoutContainer);
 Fonto.with(this).applyFontToView(linearLayout, FontNames.FONT_LATO);
-
-
 ```
 
 Remarks

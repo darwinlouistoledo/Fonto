@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'me.darwinlouistoledo:fonto:0.2.0'
+    compile 'me.darwinlouistoledo:fonto:0.3.0'
     ...
 }
 
@@ -37,10 +37,19 @@ public void onCreate() {
         super.onCreate();
 
         Fonto.with(this)
-                .addFontoTypeface(new FontoTypeface(FontNames.FONT_LATO, "fonts/Lato-Regular.ttf"))
-                .addFontoTypeface(new FontoTypeface(FontNames.FONT_MONTSERRAT, "fonts/Montserrat-Regular.ttf"))
+                .addTypeface(FontNames.FONT_LATO, "fonts/Lato-Regular.ttf")
+                .addTypeface(FontNames.FONT_MONTSERRAT, "fonts/Montserrat-Regular.ttf")
                 .create();
 }
+
+...
+...
+
+public class FontNames {
+    public static final String FONT_LATO = "lato";
+    public static final String FONT_MONTSERRAT = "montserrat";
+}
+
 ```
 
 After creating the font, you can now use the fonts. You can use the font by its name then set the typeface of the view with `setTypeface(Typeface)` method.

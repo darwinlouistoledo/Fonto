@@ -5,7 +5,7 @@ publishing {
 
     def packageName = 'me.darwinlouistoledo'
     def artifactName = 'fonto'
-    def libraryVersion = '0.2.0'
+    def libraryVersion = '0.3.0'
     def outputAAR = ("$buildDir/outputs/aar/${project.getName()}-release.aar")
 
     publications {
@@ -30,8 +30,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "0.3.0"
     }
     buildTypes {
         release {
@@ -58,7 +58,7 @@ ext {
     siteUrl = 'https://github.com/darwinlouistoledo/Fonto'
     gitUrl = 'https://github.com/darwinlouistoledo/Fonto.git'
 
-    libraryVersion = '0.2.0'
+    libraryVersion = '0.3.0'
 
     developerId = 'darwinlouistoledo'
     developerName = 'Darwin Louis Toledo'

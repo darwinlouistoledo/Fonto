@@ -5,8 +5,6 @@ import android.graphics.Typeface;
 import java.lang.ref.WeakReference;
 import java.util.LinkedHashMap;
 
-import me.darwinlouistoledo.fonto.model.FontoTypeface;
-
 /**
  * Created by darwinlouistoledo on 8/5/16.
  */

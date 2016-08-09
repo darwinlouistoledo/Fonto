@@ -1,4 +1,4 @@
-package me.darwinlouistoledo.fonto.model;
+package me.darwinlouistoledo.fonto;
 
 import android.graphics.Typeface;
 
@@ -7,7 +7,7 @@ import android.graphics.Typeface;
  *
  * @author  by darwinlouistoledo on 8/4/16.
  */
-public class FontoTypeface {
+class FontoTypeface {
     private String name;
     private String fontFile;
     private Typeface typeface;

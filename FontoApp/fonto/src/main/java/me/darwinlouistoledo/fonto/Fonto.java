@@ -4,8 +4,6 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.view.View;
 
-import me.darwinlouistoledo.fonto.model.FontoTypeface;
-
 /**
  * Fonto is a Singleton class that loads custom fonts
  * and put it on a pool of typefaces.
@@ -46,16 +44,17 @@ public class Fonto {
     /**
      * Method to add the desired font face you want to add and use.
      *
-     * @param fontoTypeFace {@link FontoTypeface FontoTypeface} object that will have the Name and Font file path
+     * @param font_name Name of the font you want to add
+     * @param font_file_path Path of the font from Assets folder
      * @return Instance of the Fonto class
      */
-    public Fonto addFontoTypeface(FontoTypeface fontoTypeFace){
-        this.fontoBuilder.addFontoTypeface(fontoTypeFace);
+    public Fonto addTypeface(String font_name, String font_file_path){
+        this.fontoBuilder.addFontoTypeface(font_name, font_file_path);
         return this;
     }
 
     /**
-     * Method to call lastly after the {@link #addFontoTypeface(FontoTypeface) addFontoTypeface} method
+     * Method to call lastly after the {@link #addTypeface(String, String ) addTypeface} method
      * to finally create the fonts added.
      */
     public void create(){

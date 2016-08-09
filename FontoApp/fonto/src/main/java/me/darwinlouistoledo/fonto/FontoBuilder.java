@@ -7,16 +7,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-
-import me.darwinlouistoledo.fonto.model.FontoTypeface;
 
 /**
  * @author  by darwinlouistoledo on 8/4/16.
  */
 class FontoBuilder implements FontoInterface {
-    private List<FontoTypeface> fontoTypeFaces;
+    private List<WeakReference<FontoTypeface>> fontoTypeFaces;
     private Context context;
     private FontoTypefacePool fontoTypefacePool;
 
@@ -27,7 +26,8 @@ class FontoBuilder implements FontoInterface {
     }
 
     public void createFonts() {
-        for (FontoTypeface ft: fontoTypeFaces){
+        for (WeakReference<FontoTypeface> wr: fontoTypeFaces){
+            FontoTypeface ft = wr.get();
             try{
                 Typeface typeface = Typeface.createFromAsset(this.context.getAssets(), ft.getFontFile());
                 ft.setTypeface(typeface);
@@ -38,8 +38,9 @@ class FontoBuilder implements FontoInterface {
         }
     }
 
-    public void addFontoTypeface(FontoTypeface fontoTypeFace) {
-        fontoTypeFaces.add(fontoTypeFace);
+    public void addFontoTypeface(String name, String file_path) {
+        WeakReference<FontoTypeface> wrFontoTypeface = new WeakReference<>(new FontoTypeface(name, file_path));
+        fontoTypeFaces.add(wrFontoTypeface);
     }
 
     @Override

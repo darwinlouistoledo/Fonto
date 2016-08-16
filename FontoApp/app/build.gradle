@@ -19,12 +19,6 @@ android {
     }
 }
 
-repositories {
-    maven {
-        url 'https://dl.bintray.com/darwinlouistoledo/maven/'
-    }
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'

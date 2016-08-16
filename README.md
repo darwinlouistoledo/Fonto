@@ -12,17 +12,15 @@ First, you need to add this gradle configuration in your `build.gradle` file.
 
 ```gradle
 repositories {
-    maven {
-        url 'https://dl.bintray.com/darwinlouistoledo/maven/'
-    }
+    jcenter()
 }
 
-...
+..
 
 dependencies {
-    ...
+    ..
     compile 'me.darwinlouistoledo:fonto:0.3.0'
-    ...
+    ..
 }
 
 ```
